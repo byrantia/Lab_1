@@ -41,5 +41,5 @@ opsdjpbp
 
 [test][dnsajdasdhas]
 
-
+[I'm a reference-style link][Arbitrary case-insensitive reference text]
 

@@ -54,3 +54,7 @@ opsdjpbp
 youtube link:https://www.youtube.com/watch?v=OJrX3aNPsHM&t=360s vvfd
 
 <http://www.youtube.com>
+
+Inline-style: 
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+

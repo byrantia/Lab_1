@@ -64,3 +64,17 @@ Reference-style:
 [logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
 
 ![toothless](https://cdn.custom-cursor.com/packs/11603/memes-dancing-toothless-pack.png)
+
+```javascript
+var a = "hello";
+alert(a);
+```
+
+```python
+s= "eeee"
+print(s)
+```
+
+```
+No Syntax cause no language specified
+```

@@ -65,24 +65,30 @@ Reference-style:
 
 ![toothless](https://cdn.custom-cursor.com/packs/11603/memes-dancing-toothless-pack.png)
 
+javascript
 ```javascript
 var a = "hello";
 alert(a);
 ```
 
+python
 ```python
 s= "eeee"
 print(s)
 ```
 
+assembly
 ```assembly
 mov ax, [1035h]
 ```
 
+ruby
 ```ruby
 puts "Hello, World!"
 ```
 
+dart
 ```dart
 runApp();
 ```
+<h1>hello</h1>

@@ -78,3 +78,7 @@ print(s)
 ```assembly
 mov ax, [1035h]
 ```
+
+```ruby
+puts "Hello, World!"
+```

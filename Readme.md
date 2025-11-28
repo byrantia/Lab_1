@@ -75,6 +75,6 @@ s= "eeee"
 print(s)
 ```
 
-```
-No Syntax cause no language specified
+```assembly
+mov ax, [1035h]
 ```

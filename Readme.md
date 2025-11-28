@@ -36,13 +36,13 @@ opsdjpbp
 - hello im unordered
 + hello im unordered
 
-[I'm an inline-style link](https://www.google.com)
-* [I'm an inline-style link](https://www.google.com "Google's Homepage")
+[I'm an inline-style link](https://www.youtube.com/watch?v=OJrX3aNPsHM&t=360s)
+* [I'm an inline-style link](https://www.youtube.com/watch?v=OJrX3aNPsHM&t=360s "Toothless dancing meme")
 
 [test][dnsajdasdhas]
 
 [I'm a reference-style link][dsiodbs]
 
-[dsiodbs]: https://www.youtube.com
+[dsiodbs]: https://www.youtube.com/watch?v=OJrX3aNPsHM&t=360s
 
 

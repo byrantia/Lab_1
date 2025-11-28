@@ -47,3 +47,7 @@ opsdjpbp
 
 [I'm a relative reference to a repository file](../master/HelloWorld.py)
 
+[You can use numbers for reference-style link definitions][1]
+
+[1]: https://www.youtube.com/watch?v=OJrX3aNPsHM&t=360s
+

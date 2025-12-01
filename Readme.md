@@ -21,7 +21,7 @@ opsdjpbp
 3. fwvw
 4. wvwd
    
-   *k
+   * k
 
    1. uisdbcbksa
 

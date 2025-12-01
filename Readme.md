@@ -80,6 +80,10 @@ Reference-style:
 Inline `code` has `back-ticks around` it.
 
 javascript
+```
+fdsf
+```
+
 ```javascript
 var a = "hello";
 alert(a);

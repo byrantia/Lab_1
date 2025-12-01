@@ -121,5 +121,6 @@ runApp();
 </ul>
  dsa
 
-[^note]: jicdjubc
-testing
+|Tabke||Arew|cool|
+|:----||:--:||--:|
+|left||middle|right|

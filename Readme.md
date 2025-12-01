@@ -123,7 +123,7 @@ runApp();
 
 Colons can be used to align columns.
 
-|test||test|
+|test|test|
 |:---|---:|
 |left|right|
 

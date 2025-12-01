@@ -121,6 +121,6 @@ runApp();
 </ul>
  dsa
 
-|Tabke||Arew|cool|
-|:----||:--:||--:|
-|left||middle|right|
+| Tabke || Arew | cool |
+| :---- || :--: || --: |
+| left || middle | right |

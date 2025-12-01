@@ -77,6 +77,8 @@ Reference-style:
 
 ![toothless](https://cdn.custom-cursor.com/packs/11603/memes-dancing-toothless-pack.png)
 
+Inline `code` has `back-ticks around` it.
+
 javascript
 ```javascript
 var a = "hello";

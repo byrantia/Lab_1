@@ -25,16 +25,22 @@ This project is a self-checkout system with two parts:
    
 ![Instore](https://github.com/user-attachments/assets/46685b83-5639-4f59-a321-86c8f2886d2d)
 
-1. LCD displays options for customers to choose between payment and scanning items
+1. LCDs options for customers to choose between payment and scanning items
+   - LCD Shows the main options:
+     - `*` = scan item
+     - `#` = payment
 
-   - Scanning items:
-      - Customers scan items using a camera
+   - Scanning items flow:
       - LCD prompts user to scan items
+      - Customers scan the barcode using a camera
+      - System reads item from central database (Firestore)
+      - LCD shows item name, price and total price
+      - System would show if item out of stock
         
-   - System shows item name, price and total price on LCD
-        
-   - Payment modes:
-      - LCD displays an option for customers to choose between PayWave and Pin
+   - Payment modes flow:
+      - LCDs payment option for customers:
+           - `1` = PayWave
+           - `2` = Pin
       - Paywave Selected:
            - Customers uses PayWave(RFID) to pay
       - Pin Selected:
@@ -42,10 +48,8 @@ This project is a self-checkout system with two parts:
       - RFID (PayWave style)
       - 6-digit PIN (keypad input, masked on LCD)
       - Stock deduction in Firestore after successful payment
-
-  ![STAFF MODE](https://github.com/user-attachments/assets/67fde9a4-a8fb-469f-987c-323d03928a48)
-  
  ### Staff mode:
+  ![STAFF MODE](https://github.com/user-attachments/assets/67fde9a4-a8fb-469f-987c-323d03928a48)
   - Staff RFID access check
   - Scan barcode and restock quantity
   - Updates Firestore stock using atomic increment

@@ -4,12 +4,17 @@ ______
 ## Project Details:
 
 This project is a self-checkout system with two parts:
-
 1) **In-store self-checkout (Raspberry Pi)**  
    Customers scan items using a camera, view totals on an LCD, and pay using RFID (PayWave) or a 6-digit PIN.
 
-2) **Online self-checkout (Website)**  
-   Customers browse items from Firestore, add to cart, choose self-collection or home delivery (+$4), pay, and receive a QR code for self-collection.
+2) ** Staff Mode **
+   
+
+4) **Online self-checkout (Website)**  
+   Customers browse items from a website, add to cart, choose self-collection or home delivery (+$4), pay, and receive a QR code for self-collection.
+
+   
+
 
 ## Key Features
 

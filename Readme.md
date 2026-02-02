@@ -4,13 +4,12 @@ ______
 
 ## Project Details:
 
-This project is a self-checkout system with two parts:
+This project is a self-checkout system with three parts:
 1) **In-store self-checkout (Raspberry Pi)**  
    Customers scan items using a camera, view totals on an LCD, and pay using RFID (PayWave) or a 6-digit PIN.
 
 2) **Staff Mode**
-   Staff must authenticate using the staff card (RFID) before restocking an item. By using the camera to scan the specific item barcode that needs to be restocked 
-   
+   Staff must authenticate using the staff card (RFID) before restocking an item. Staff scan the item barcode and enters restock quantity using the keypad
 
 3) **Online self-checkout (Website)**  
    Customers browse items from a website, add to cart, choose self-collection or home delivery (+$4), pay, and receive a QR code for self-collection.
@@ -24,8 +23,6 @@ This project is a self-checkout system with two parts:
 ### In-store (Raspberry Pi system)
    
 ![Instore](https://github.com/user-attachments/assets/46685b83-5639-4f59-a321-86c8f2886d2d)
-
-1. LCDs options for customers to choose between payment and scanning items
    - LCD Shows the main options:
      - `*` = scan item
      - `#` = payment
@@ -139,53 +136,3 @@ HAL (Hardware Abstraction Layer):
 - `hal_lcd.py`, `hal_keypad.py`, `hal_rfid_reader.py`, `hal_buzzer.py`, `hal_led.py`, `hal_input_switch.py`  
   Hardware interfaces for the Raspberry Pi.
 
-## Firestore Data Structure
-
-### Collection: `ItemCollection`
-Each item document should include:
-- `item` (string)  
-- `price` (number or string convertible to float)  
-- `barcode` (string, expected 10 digits)  
-- `quantity` (integer)
-
-### Orders
-Orders are stored under:
-- `Orders / PickUp / Orders / {orderNo}` for self-collection
-- `Orders / OnlineOrder / Orders / {orderNo}` for delivery
-
-Each order includes:
-- `orderNo`
-- `fulfilment` (`self` or `delivery`)
-- `customer` `{ name, email, address }`
-- `items` list (productId, name, price, qty, lineTotal)
-- `subtotal`, `deliveryFee`, `total`
-- `status` (example: `"paid"`)
-- `createdAt` (serverTimestamp)
-
-## Setup and Run (Raspberry Pi In-store)
-
-### Requirements
-- Raspberry Pi with PiCam2
-- RFID reader, keypad, LCD, slide switch, buzzer, LED
-- Python 3
-
-### Install dependencies (example)
-Depending on your Pi OS, you may need:
-- `picamera2`
-- `pyzbar`
-- `firebase-admin`
-- `google-cloud-firestore`
-- `libzbar0` (system library for barcode decode)
-
-### Firebase service account
-Your Python code uses a service account JSON file, for example:
-- `/home/pi/project/.../firebase-adminsdk-....json`
-
-Make sure:
-- The file path is correct on your Pi
-- Do not upload the service account JSON to public repos
-
-### Run
-From the project folder:
-```bash
-python3 main.py

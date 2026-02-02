@@ -32,17 +32,17 @@ This project is a self-checkout system with three parts:
       - Customers scan the barcode using a camera
       - System reads item from central database (Firestore)
       - LCD shows item name, price and total price
-      - System would show if item out of stock
+      - If the stock is not enough, the LCD shows “Out of stock”, and the item is not added
         
    - Payment modes flow:
       - LCDs payment option for customers:
-           - `1` = PayWave
+           - `1` = PayWave (RFID)
            - `2` = Pin
       - Paywave Selected: Customers use PayWave(RFID) to pay
       - Pin Selected: Customers enter 6 digits on keypad (masked), `#` to confirm, `*` to cancel
       - On success: System deducts stock from Firestore and clears cart/total
       - On fail: system returns to main options and still stores price
-      - 
+      
  ## Staff mode:
   ![STAFF MODE](https://github.com/user-attachments/assets/67fde9a4-a8fb-469f-987c-323d03928a48)
   - Staff mode is controlled by the slide switch
@@ -67,6 +67,7 @@ This project is a self-checkout system with three parts:
   - subtotal
   - delivery fee (+$4 if delivery selected)
   - total
+    
 ### Checkout:
 - Customer selects fulfilment:
   - self-collection
@@ -105,9 +106,9 @@ This project is a self-checkout system with three parts:
 ## Folder and Files (Application Layer)
 
 Python (In-store):
-- `main.py`  
-  Entry point for the in-store system.
-- `instore_checkout.py`  
+- `hal_camera.py`  
+  Captures camera frames using PiCam2, decodes barcodes, returns barcode string.
+- `instore_checkout.py`  (Main Entry point)
   Runs the in-store checkout system. Switches between customer checkout and staff refill mode using the slide switch.
 - `product_lookup.py`  
   Scans a barcode (expected 10 digits) using the camera and queries Firestore to return item name, price, and stock quantity.
@@ -131,8 +132,6 @@ Website (Online):
   Page styling (layout, cards, cart UI, modal, order summary).
 
 HAL (Hardware Abstraction Layer):
-- `hal_camera.py`  
-  Captures camera frames using PiCam2, decodes barcodes, returns barcode string.
 - `hal_lcd.py`, `hal_keypad.py`, `hal_rfid_reader.py`, `hal_buzzer.py`, `hal_led.py`, `hal_input_switch.py`  
-  Hardware interfaces for the Raspberry Pi.
+  
 

@@ -14,7 +14,7 @@ This project is a self-checkout system with two parts:
 
 3) **Online self-checkout (Website)**  
    Customers browse items from a website, add to cart, choose self-collection or home delivery (+$4), pay, and receive a QR code for self-collection.
-![Instore](https://github.com/user-attachments/assets/46685b83-5639-4f59-a321-86c8f2886d2d)
+
 
    
 
@@ -22,7 +22,7 @@ This project is a self-checkout system with two parts:
 ## Key Features
 
 ### In-store (Raspberry Pi system)
-
+![Instore](https://github.com/user-attachments/assets/46685b83-5639-4f59-a321-86c8f2886d2d)
 
 - Scanning items:
    - LCD displays options for customers to choose between payment and scanning items
@@ -34,6 +34,9 @@ This project is a self-checkout system with two parts:
   - RFID (PayWave style)
   - 6-digit PIN (keypad input, masked on LCD)
 - Stock deduction in Firestore after successful payment
+
+  ![STAFF MODE](https://github.com/user-attachments/assets/67fde9a4-a8fb-469f-987c-323d03928a48)
+
 - Staff mode:
   - Staff RFID access check
   - Scan barcode and restock quantity

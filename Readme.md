@@ -41,32 +41,49 @@ This project is a self-checkout system with two parts:
       - LCDs payment option for customers:
            - `1` = PayWave
            - `2` = Pin
-      - Paywave Selected:
-           - Customers uses PayWave(RFID) to pay
-      - Pin Selected:
-           - Customer uses the KeyPad to pay
-      - RFID (PayWave style)
-      - 6-digit PIN (keypad input, masked on LCD)
-      - Stock deduction in Firestore after successful payment
- ### Staff mode:
+      - Paywave Selected: Customers use PayWave(RFID) to pay
+      - Pin Selected: Customers enter 6 digits on keypad (masked), `#` to confirm, `*` to cancel
+      - On success: System deducts stock from Firestore and clears cart/total
+      - On fail: system returns to main options and still stores price
+      - 
+ ## Staff mode:
   ![STAFF MODE](https://github.com/user-attachments/assets/67fde9a4-a8fb-469f-987c-323d03928a48)
-  - Staff RFID access check
-  - Scan barcode and restock quantity
-  - Updates Firestore stock using atomic increment
+  - Staff mode is controlled by the slide switch
+  - Staff must press `0` to start staff access
+  - Staff authorised using staff card (RFID)
+  - Staff scans the item barcode using the camera
+  - Staff enters restock quantity using keypad:
+  - digits = input quantity
+  - `*` = backspace
+  - `#` = confirm
+   - System updates Firestore stock
 
-### Online (Website)
-- Loads products from Firestore (only shows items with stock)
-- View item details and add to cart
-- Increase, decrease, remove items from cart
-- Fulfilment:
-  - Self-collection (generates QR code)
-  - Home delivery (+$4 delivery fee)
-- Checkout:
-  - Writes an order record to Firestore
-  - Updates stock using Firestore transaction (prevents overselling)
+## Online (Website)
+- Website reads items from Central Database(FireStore)
+- Only items with `quantity > 0` are displayed
+### Cart functions
+- Add item to cart
+- Increase quantity (+)
+- Decrease quantity (-)
+- Remove item (X)
+- Totals update live:
+  - subtotal
+  - delivery fee (+$4 if delivery selected)
+  - total
+### Checkout:
+- Customer selects fulfilment:
+  - self-collection
+  - home delivery (+$4 and address required)
+- Customer enters name and email (address required only for delivery)
+- System creates an order record in Firestore
+- System updates stock using a Firestore transaction:
+  - checks stock is enough
+  - reduces stock safely
+  - prevents overselling
+- System shows order summary
+- For self-collection: the system generates a QR code using the order number
 
 ## System Flow Summary
-
 ### In-store mode switching
 - Slide switch controls mode:
   - `1` = Customer checkout mode

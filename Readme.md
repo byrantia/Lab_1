@@ -28,9 +28,12 @@ This project is a self-checkout system with two parts:
 1. LCD displays options for customers to choose between payment and scanning items
 
    - Scanning items:
-
       - Customers scan items using a camera
-      - LCD prompts and status messages
+      - LCD prompts user to scan items
+        
+   - Payment mode:
+      -
+     
 
 - Cart tracking and running total
 - Payment modes:

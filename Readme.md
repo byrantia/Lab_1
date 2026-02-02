@@ -1,6 +1,7 @@
 # SPMart Supermarket Self-Checkout System
 ______
 
+
 ## Project Details:
 
 This project is a self-checkout system with two parts:
@@ -20,6 +21,8 @@ This project is a self-checkout system with two parts:
 ## Key Features
 
 ### In-store (Raspberry Pi system)
+![Uploading image.png…]()
+
 - Scanning items:
    - LCD displays options for customers to choose between payment and scanning items
    - Customers scan items using a camera

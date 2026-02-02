@@ -22,12 +22,15 @@ This project is a self-checkout system with two parts:
 ## Key Features
 
 ### In-store (Raspberry Pi system)
+   
 ![Instore](https://github.com/user-attachments/assets/46685b83-5639-4f59-a321-86c8f2886d2d)
 
-- Scanning items:
-   - LCD displays options for customers to choose between payment and scanning items
-   - Customers scan items using a camera
-   - LCD prompts and status messages
+1. LCD displays options for customers to choose between payment and scanning items
+
+   - Scanning items:
+
+      - Customers scan items using a camera
+      - LCD prompts and status messages
 
 - Cart tracking and running total
 - Payment modes:

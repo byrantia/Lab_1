@@ -14,6 +14,7 @@ This project is a self-checkout system with two parts:
 
 3) **Online self-checkout (Website)**  
    Customers browse items from a website, add to cart, choose self-collection or home delivery (+$4), pay, and receive a QR code for self-collection.
+![Instore](https://github.com/user-attachments/assets/46685b83-5639-4f59-a321-86c8f2886d2d)
 
    
 
@@ -21,7 +22,7 @@ This project is a self-checkout system with two parts:
 ## Key Features
 
 ### In-store (Raspberry Pi system)
-![Uploading image.png…]()
+
 
 - Scanning items:
    - LCD displays options for customers to choose between payment and scanning items

@@ -31,19 +31,21 @@ This project is a self-checkout system with two parts:
       - Customers scan items using a camera
       - LCD prompts user to scan items
         
-   - Payment mode:
-      -
-     
-
-- Cart tracking and running total
-- Payment modes:
-  - RFID (PayWave style)
-  - 6-digit PIN (keypad input, masked on LCD)
-- Stock deduction in Firestore after successful payment
+   - System shows item name, price and total price on LCD
+        
+   - Payment modes:
+      - LCD displays an option for customers to choose between PayWave and Pin
+      - Paywave Selected:
+           - Customers uses PayWave(RFID) to pay
+      - Pin Selected:
+           - Customer uses the KeyPad to pay
+      - RFID (PayWave style)
+      - 6-digit PIN (keypad input, masked on LCD)
+      - Stock deduction in Firestore after successful payment
 
   ![STAFF MODE](https://github.com/user-attachments/assets/67fde9a4-a8fb-469f-987c-323d03928a48)
-
-- Staff mode:
+  
+ ### Staff mode:
   - Staff RFID access check
   - Scan barcode and restock quantity
   - Updates Firestore stock using atomic increment

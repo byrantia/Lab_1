@@ -1,4 +1,7 @@
 # SPMart Supermarket Self-Checkout System
+______
+
+## Project Details:
 
 This project is a self-checkout system with two parts:
 

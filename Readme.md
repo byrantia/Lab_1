@@ -7,10 +7,11 @@ This project is a self-checkout system with two parts:
 1) **In-store self-checkout (Raspberry Pi)**  
    Customers scan items using a camera, view totals on an LCD, and pay using RFID (PayWave) or a 6-digit PIN.
 
-2) ** Staff Mode **
+2) **Staff Mode**
+   Staff must authenticate using the staff card (RFID) before restocking an item. By using the camera to scan the specific item barcode that needs to be restocked 
    
 
-4) **Online self-checkout (Website)**  
+3) **Online self-checkout (Website)**  
    Customers browse items from a website, add to cart, choose self-collection or home delivery (+$4), pay, and receive a QR code for self-collection.
 
    
@@ -18,9 +19,12 @@ This project is a self-checkout system with two parts:
 
 ## Key Features
 
-### In-store (Raspberry Pi)
-- Barcode scanning using PiCam2 + pyzbar
-- LCD prompts and status messages
+### In-store (Raspberry Pi system)
+- Scanning items:
+   - LCD displays options for customers to choose between payment and scanning items
+   - Customers scan items using a camera
+   - LCD prompts and status messages
+
 - Cart tracking and running total
 - Payment modes:
   - RFID (PayWave style)
